@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 import numpy as np
 
 

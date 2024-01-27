@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 class RoseDictionary:
     def __init__(self):
         self.items = []

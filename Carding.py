@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def play_round(card1, card2, damage_a, damage_b, damage_c):
     damage1 = {'A': damage_a, 'B': damage_b, 'C': damage_c}.get(card1, 0)
     damage2 = {'A': damage_a, 'B': damage_b, 'C': damage_c}.get(card2, 0)
