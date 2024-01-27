@@ -1,12 +1,17 @@
-def play_game(player1, player2, health1, health2, damage_A, damage_B, damage_C, rounds):
+def play_round(card1, card2, damage_a, damage_b, damage_c):
+    damage1 = {'A': damage_a, 'B': damage_b, 'C': damage_c}.get(card1, 0)
+    damage2 = {'A': damage_a, 'B': damage_b, 'C': damage_c}.get(card2, 0)
+
+    return damage1, damage2
+
+
+def play_game(health1, health2, damage_a, damage_b, damage_c, rounds):
     score1, score2 = 0, 0
 
-    for i in range(rounds):
+    for _ in range(rounds):
         try:
             card1, card2 = input().split()
-
-            damage1 = {'A': damage_A, 'B': damage_B, 'C': damage_C}[card1]
-            damage2 = {'A': damage_A, 'B': damage_B, 'C': damage_C}[card2]
+            damage1, damage2 = play_round(card1, card2, damage_a, damage_b, damage_c)
 
             if damage1 > damage2:
                 score1 += 1
@@ -16,7 +21,7 @@ def play_game(player1, player2, health1, health2, damage_A, damage_B, damage_C, 
             health2 -= damage1
             health1 -= damage2
 
-        except ValueError as e:
+        except ValueError:
             print("Invalid Command.")
             exit()
 
@@ -26,20 +31,14 @@ def play_game(player1, player2, health1, health2, damage_A, damage_B, damage_C, 
 def main():
     try:
         player1, player2 = input().split()
-        health1, health2 = input().split()
-        health1 = int(health1)
-        health2 = int(health2)
-        damage_A, damage_B, damage_C = input().split()
-        damage_A = int(damage_A)
-        damage_B = int(damage_B)
-        damage_C = int(damage_C)
+        health1, health2 = map(int, input().split())
+        damage_a, damage_b, damage_c = map(int, input().split())
         rounds = 3
-    except ValueError as e:
+    except ValueError:
         print("Invalid Command.")
         exit()
 
-    score1, health1, score2, health2 = play_game(player1, player2, health1, health2, damage_A, damage_B, damage_C,
-                                                 rounds)
+    score1, health1, score2, health2 = play_game(health1, health2, damage_a, damage_b, damage_c, rounds)
 
     # Print results to terminal
     print(f"{player1} -> Score: {score1}, Health: {health1}")
