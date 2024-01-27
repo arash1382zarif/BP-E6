@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def format_text(input_text):
     cleaned_text = " ".join(input_text.split())
 

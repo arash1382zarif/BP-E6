@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def extract_domain(email):
     """Extract domain from email."""
     try:

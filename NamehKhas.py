@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def find_pairs_with_sum(arr, target):
     result_indices = []
     seen_numbers = set()

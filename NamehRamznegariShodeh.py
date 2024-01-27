@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def decrypt_codes(codes):
     decrypt = [0] * len(codes)
 
