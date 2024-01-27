@@ -1,13 +1,24 @@
-n = int(input())
-emails = set()
-for i in range(n):
-    email = input()
+def extract_domain(email):
+    """Extract domain from email."""
     try:
-        email = email[email.rindex("@")+1:]
-    except:
-        email = ""
-    emails.add(email)
+        return email[email.rindex("@") + 1:]
+    except ValueError:
+        return ""
 
-emails = sorted(emails)
-for m in emails:
-    print(m)
+
+def main():
+    n = int(input())
+    unique_domains = set()
+
+    for _ in range(n):
+        email = input()
+        domain = extract_domain(email)
+        unique_domains.add(domain)
+
+    sorted_domains = sorted(unique_domains)
+    for domain in sorted_domains:
+        print(domain)
+
+
+if __name__ == "__main__":
+    main()
