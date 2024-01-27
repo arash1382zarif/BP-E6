@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def get_input(prompt):
     """Get user input."""
     return input(prompt).strip()

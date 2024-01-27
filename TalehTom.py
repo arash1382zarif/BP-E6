@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def get_input_numbers():
     """Get user input for numbers until 'end' is entered."""
     numbers = []

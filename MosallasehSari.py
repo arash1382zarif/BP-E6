@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def get_int_input(prompt):
     return int(input(prompt))
 
