@@ -1,6 +1,6 @@
-def get_input(prmopt):
+def get_input(prompt):
     """Get user input."""
-    return input(prmopt).strip()
+    return input(prompt).strip()
 
 
 def create_empty_map(n):
