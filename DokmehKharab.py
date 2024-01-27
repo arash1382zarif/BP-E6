@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def get_int_input(prompt):
     """Get integer input from the user."""
     return int(input(prompt))

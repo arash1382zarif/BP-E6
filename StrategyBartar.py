@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Author: Arash Zarif
+
 def get_input():
     """Get space-separated integers as input."""
     return map(int, input().split())
